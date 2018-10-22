@@ -107,6 +107,8 @@ Shader "Kvant/Wall/Surface"
             float4 s = tex2Dlod(_ScaleTex, uv);
 
             v.vertex.xyz = rotate_vector(v.vertex.xyz * s.xyz, r) + p.xyz;
+            v.vertex.z += s.z * 100;
+
             v.normal = rotate_vector(v.normal, r);
         #if _NORMALMAP
             v.tangent.xyz = rotate_vector(v.tangent.xyz, r);

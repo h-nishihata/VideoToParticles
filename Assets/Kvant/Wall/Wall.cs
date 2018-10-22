@@ -386,7 +386,6 @@ namespace Kvant
             _positionBuffer = CreateBuffer();
             _rotationBuffer = CreateBuffer();
             //_scaleBuffer = CreateBuffer();
-            //_scaleBuffer = (RenderTexture)_sourceVideo.texture;
 
             if (!_kernelMaterial) _kernelMaterial = CreateMaterial(_kernelShader);
             if (!_debugMaterial) _debugMaterial = CreateMaterial(_debugShader);

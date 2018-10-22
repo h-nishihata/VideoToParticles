@@ -33,6 +33,8 @@ Shader "Hidden/Kvant/Wall/Kernel"
     float4 _ScaleNoise;     // x freq, y freq, amp, time
     float3 _RotationAxis;
 
+    float depth;
+
     // PRNG function.
     float nrand(float2 uv, float salt)
     {
