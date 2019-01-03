@@ -291,20 +291,20 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 138018912}
-  m_LocalRotation: {x: -0.000000028290886, y: -0.9848078, z: 0.17364822, w: -0.00000016044557}
-  m_LocalPosition: {x: 0, y: 1.71, z: 1.83}
+  m_LocalRotation: {x: 0.00000008912461, y: -0.94832367, z: 0.31730464, w: 0.00000026636542}
+  m_LocalPosition: {x: 0, y: 3.3, z: 2.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 577106728}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 20, y: -180, z: 0}
+  m_LocalEulerAnglesHint: {x: 37, y: -179.99998, z: 0}
 --- !u!114 &138018914
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 138018912}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d637268abbbb5428e991dd9ec93136f2, type: 3}
   m_Name: 
@@ -312,7 +312,7 @@ MonoBehaviour:
   positionFrequency: 0.2
   rotationFrequency: 0.2
   positionAmount: 1
-  rotationAmount: 20
+  rotationAmount: 10
   positionComponents: {x: 1, y: 1, z: 1}
   rotationComponents: {x: 1, y: 1, z: 0}
   positionOctave: 1
@@ -409,8 +409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0a37f76b28f47ab83a945e8745322d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numInstances: 100
-  trails: {fileID: 1280893009723560, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
+  numInstances: 128
+  trails: {fileID: 1879547560}
 --- !u!4 &339203847
 Transform:
   m_ObjectHideFlags: 0
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 577106727}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f91a6fa75d39940268b68c6204273e22, type: 3}
   m_Name: 
@@ -470,11 +470,31 @@ MonoBehaviour:
     velocity: 1
     arbitraryVector: {x: 0, y: 1, z: 0}
     randomness: 0
-  rotation:
-    mode: 2
-    velocity: 10
+    limit: 0
+    hasReachedLimit: 0
+    startTime: 0
+    changeDirSec: 0
+    maxVelocity: 0
+  rotationX:
+    mode: 0
+    velocity: 3
     arbitraryVector: {x: 0, y: 1, z: 0}
     randomness: 0
+    limit: 0
+    hasReachedLimit: 0
+    startTime: 0
+    changeDirSec: 0
+    maxVelocity: 0
+  rotationY:
+    mode: 2
+    velocity: 1
+    arbitraryVector: {x: 0, y: 1, z: 0}
+    randomness: 0
+    limit: 0
+    hasReachedLimit: 0
+    startTime: 0
+    changeDirSec: 0
+    maxVelocity: 0
   useLocalCoordinate: 1
 --- !u!1 &621431266
 GameObject:
@@ -616,7 +636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53de55c5f1501c049a28249224f22696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyingTime: 200
+  flyingTime: 50
   path: {fileID: 621431267}
 --- !u!1 &1742880755
 GameObject:
@@ -648,6 +668,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1879547560 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1355477589996320, guid: e793baacc4c454981a7355f398b94e7b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1998175884}
 --- !u!1001 &1998175884
 Prefab:
   m_ObjectHideFlags: 0
@@ -655,46 +680,37 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4697421098347250, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
+    - target: {fileID: 4890111088281374, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4697421098347250, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
+    - target: {fileID: 4890111088281374, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4697421098347250, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
+    - target: {fileID: 4890111088281374, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4697421098347250, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
+    - target: {fileID: 4890111088281374, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4697421098347250, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
+    - target: {fileID: 4890111088281374, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4697421098347250, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
+    - target: {fileID: 4890111088281374, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4697421098347250, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
+    - target: {fileID: 4890111088281374, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4697421098347250, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
+    - target: {fileID: 4890111088281374, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1280893009723560, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114806483173701804, guid: e793baacc4c454981a7355f398b94e7b,
-        type: 2}
-      propertyPath: speed
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e793baacc4c454981a7355f398b94e7b, type: 2}
@@ -726,7 +742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7105f7ce885974726abd5376b5292bc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   maxDeltaRotate: 100
 --- !u!4 &2133616204
 Transform:

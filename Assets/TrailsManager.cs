@@ -11,7 +11,7 @@ public class TrailsManager : MonoBehaviour {
 	void Start () {
         for (int i = 0; i < numInstances; i++)
         {
-            var trail = Instantiate(trails, trails.transform.position + Random.insideUnitSphere * 10, Random.rotation);
+            var trail = Instantiate(trails, trails.transform.position + Random.insideUnitSphere * 40, Random.rotation);
             trail.transform.parent = gameObject.transform;
         }
 	}

@@ -4,15 +4,25 @@ using System.Collections;
 public class FollowTarget : MonoBehaviour
 {
 	Transform target;
-	public float speed = 1.0f;
-	public float maxDeltaRotate = 100f;
+	public float speed;
+	public float maxDeltaRotate;
 
     void Start()
     {
         target = GameObject.FindWithTag("Player").transform;
+
+        if (gameObject.name == "Flying Object") return;
+
+        speed = Random.Range(1.6f, 10.0f);
+        maxDeltaRotate = Random.Range(2f, 100f);
+
+        var col = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), 1f);
+        var mat = gameObject.GetComponent<TrailRenderer>().material;
+        mat.SetColor("_TintColor", col);
     }
 
-    void Update (){		
+    void Update ()
+    {		
 		Vector3 to = target.transform.position - transform.position;
 		Quaternion toRot = Quaternion.LookRotation (to, Vector3.up);
 
