@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Trails/Scenes/Trails+Particles.unity
+    path: Assets/Packages/SimpleFluid/Main/Trails/Scene/Trails.unity
     guid: 95d1d9fd77a2d42f7878de8c75c9506b
   m_configObjects: {}
