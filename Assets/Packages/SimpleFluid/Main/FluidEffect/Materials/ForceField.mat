@@ -25,4 +25,4 @@ Material:
     m_Floats:
     - _InvRadius: 1.25
     m_Colors:
-    - _DirAndCenter: {r: 0, g: 0, b: 0, a: 0}
+    - _DirAndCenter: {r: 0.27668354, g: 0.96096104, b: 0.89055496, a: 0.4659714}

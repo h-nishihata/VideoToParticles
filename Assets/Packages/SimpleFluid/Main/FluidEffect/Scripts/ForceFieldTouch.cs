@@ -18,10 +18,18 @@ namespace SimpleFluid {
         Vector3 _mousePos;
         RenderTexture _forceFieldTex;
 
-    	void Start () {
-    	
-    	}
-    	void Update () {
+        float startTime;
+        public Vector3 mousePos;
+        public bool stirEnabled;
+        Vector3 centerPos;
+        float rad;
+
+        void Start()
+        {
+            centerPos = new Vector3(Screen.width * 0.25f, Screen.height * 0.75f, 0);
+        }
+
+        void Update () {
             InitOrResizeForceField (solver.Width, solver.Height);
 
             UpdateForceField();
@@ -37,14 +45,33 @@ namespace SimpleFluid {
             }
         }
         void UpdateForceField() {
-            var mousePos = Input.mousePosition;
             var dx = UpdateMousePos(mousePos);
             var forceVector = Vector2.zero;
             var uv = Vector2.zero;
 
-            if (Input.GetMouseButton (0)) {
+            var diff = Time.timeSinceLevelLoad - startTime;
+
+            if((diff > 10f) && (!stirEnabled))
+            {
+                startTime = Time.timeSinceLevelLoad;
+                stirEnabled = true;
+            }
+
+            if (stirEnabled)
+            {
+                var ang2Rad = (3.14 * 0.00555) * 10;
+                rad += (float)ang2Rad;
+                mousePos.x = centerPos.x + (200 * Mathf.Cos(rad));
+                mousePos.y = centerPos.y + (200 * Mathf.Sin(rad));
+
                 uv = Camera.main.ScreenToViewportPoint (mousePos);
                 forceVector = Vector2.ClampMagnitude ((Vector2)dx, 1f);
+
+                if (rad > 6.27f * 3)
+                {
+                    stirEnabled = false;
+                    rad = diff = 0;
+                }
             }
 
             forceFieldMat.SetVector(PROP_DIR_AND_CENTER, 

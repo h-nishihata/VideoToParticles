@@ -32,5 +32,5 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - <noninit>: 0
-    - _Dt: 0.94163954
+    - _Dt: 0.36408007
     m_Colors: []

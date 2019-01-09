@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   solverMat: {fileID: 2100000, guid: f44dc9d73b49e0f419acbf73daf233e1, type: 2}
-  forcePower: 5
+  forcePower: 20
   k: 0.12
   vis: 0.1
   timeStep: 0.1
@@ -272,7 +272,9 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   solver: {fileID: 418822632}
   forceFieldMat: {fileID: 2100000, guid: 6825da0cea7fe8c499c346d233555ed5, type: 2}
-  forceRadius: 0.05
+  forceRadius: 0.2
+  mousePos: {x: 0, y: 0, z: 0}
+  stirEnabled: 0
 --- !u!1 &711871904
 GameObject:
   m_ObjectHideFlags: 0
